@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public Animator animator;
     public float gravity = 9.8f;
     public float jumpForce;
     public float speed;
@@ -38,6 +39,15 @@ public class PlayerController : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space) && _characterController.isGrounded)
         {
             _fallVelocity = -jumpForce;
+            animator.SetBool("isGrounded", false);
+        }
+        if(_moveVector.magnitude > 0)
+        {
+            animator.SetBool("isRun", true);
+        }
+        else
+        {
+            animator.SetBool("isRun", false);
         }
     }
     // Update is called once per frame
@@ -49,6 +59,7 @@ public class PlayerController : MonoBehaviour
         if(_characterController.isGrounded)
         {
             _fallVelocity = 0;
+            animator.SetBool("isGrounded", true);
         }
     }
 }
