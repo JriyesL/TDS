@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1647484251356900918}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.515, y: 1.35, z: 2.686}
+  m_LocalPosition: {x: -0.19, y: 1.071, z: 0.438}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 8474815111896133814}
@@ -84,6 +84,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetPoint: {fileID: 1266539605166064093}
   cameraLink: {fileID: 8474815111084487879}
+  targetInSkyDistance: 100
 --- !u!1 &8474815111084487877
 GameObject:
   m_ObjectHideFlags: 0
@@ -95,6 +96,7 @@ GameObject:
   - component: {fileID: 8474815111084487872}
   - component: {fileID: 8474815111084487879}
   - component: {fileID: 8474815111084487878}
+  - component: {fileID: 7242963757100812217}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -167,6 +169,18 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8474815111084487877}
   m_Enabled: 1
+--- !u!114 &7242963757100812217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8474815111084487877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fead609202686cf41b64a8ca4d4fc844, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8474815111896133813
 GameObject:
   m_ObjectHideFlags: 0
@@ -180,6 +194,7 @@ GameObject:
   - component: {fileID: 8474815111896133809}
   - component: {fileID: 8474815111896133808}
   - component: {fileID: 6377316211258518958}
+  - component: {fileID: 6379881470824825208}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -254,7 +269,7 @@ CharacterController:
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: -0.58, y: 0.77, z: 0}
+  m_Center: {x: -0.56, y: 0.77, z: 0}
 --- !u!114 &6377316211258518958
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -270,6 +285,20 @@ MonoBehaviour:
   fireballPrefab: {fileID: 1930940550465479154, guid: 489f993914a67514eaa35832c79f0412,
     type: 3}
   fireballSourceTransform: {fileID: 130993905327325939}
+--- !u!114 &6379881470824825208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8474815111896133813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c9d69662d5caf94187fcd9a2f7b75e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value: 100
+  valueRectTransform: {fileID: 0}
 --- !u!1 &8474815112034134519
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,6 +6,7 @@ public class FireballSource : MonoBehaviour
 {
     public Transform targetPoint;
     public Camera cameraLink;
+    public float targetInSkyDistance;
     // Start is called before the first frame update
     private void Update()
     {
@@ -14,6 +15,10 @@ public class FireballSource : MonoBehaviour
         if(Physics.Raycast(ray, out hit))
         {
             targetPoint.position = hit.point;
+        }
+        else
+        {
+            targetPoint.position = ray.GetPoint(targetInSkyDistance);
         }
         transform.LookAt(targetPoint.position);
     }
