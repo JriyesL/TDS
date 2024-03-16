@@ -12,4 +12,8 @@ public class EnemyHealth : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    public void DealDamage(float damage)
+    {
+    value -= damage;
+    }
 }
